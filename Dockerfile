@@ -15,11 +15,6 @@ RUN apt-get update && \
 
 ENV SSMTP_HOST=postfix
 ENV SSMTP_PORT=25
-ENV SSMTP_FROM_HOSTNAME=example.com
-ENV SSMTP_USE_TLS=Yes
-ENV SSMTP_USE_STARLTLS=Yes
-ENV SSMTP_AUTH_USER=user
-ENV SSMTP_AUTH_PASSWORD=password
 
 COPY ./docker-entrypoint.sh /
 RUN chmod u+x /docker-entrypoint.sh
